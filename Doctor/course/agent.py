@@ -17,7 +17,7 @@ from langchain import hub
 
 from langchain_community.chat_models import ChatZhipuAI
 #把keys设置在环境变量中
-os.environ["ZHIPUAI_API_KEY"] = "73e8b921f04541469ff73ca558811385.wo1Jy4EjyRxUJzeu"
+os.environ["ZHIPUAI_API_KEY"] = ""
 mdoel = ChatZhipuAI(
     model="glm-4-flash",
     temperature=0.9,
@@ -269,5 +269,6 @@ if __name__ == '__main__':
             verbose = os.getenv("VERBOSE")
         )
         print(agent_chain.invoke({"input": query})['output'])
+
 
 
